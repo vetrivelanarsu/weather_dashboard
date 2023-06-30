@@ -1,0 +1,34 @@
+.chart{
+    width:100%;
+    height: 270px;
+    /* border: 1px solid red; */
+    background-color: white;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+
+.chartdiv{
+    padding-top: 30px;
+    width: 90%;
+    height:70%;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+
+
+.chartdata{
+    width: 100%;
+}
+.button{
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.weather-icons {
+    margin: auto;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}

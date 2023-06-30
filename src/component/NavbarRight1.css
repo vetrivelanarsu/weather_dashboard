@@ -1,0 +1,12 @@
+.navright{
+    width: 100%;
+    height: 40px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    /* padding-left: 8px; */
+    margin-bottom: 25px;
+    /* padding-right: 8px; */
+}
+
+

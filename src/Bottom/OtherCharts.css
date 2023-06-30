@@ -1,0 +1,17 @@
+
+
+
+.gridbody{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 100px;
+   
+
+}
+
+.otherchartsdiv{
+    width: 100%;
+    border: 1px solid red;
+  
+}

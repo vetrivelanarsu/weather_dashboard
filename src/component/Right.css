@@ -1,0 +1,8 @@
+.right{
+    background-color: white;
+    width: 75%;
+    height: 100vh;
+    /* background-color: rgba(255, 255, 255, 0.253) ; */
+    border-radius: 30px 0px 0px 30px;
+    box-sizing: border-box;
+}
