@@ -87,9 +87,11 @@ const weatherData = [
 
 
 
-export default function OtherCharts () {
-    const { humidity, temperatureCelsius,wind,precipitation,uvIndex,chanceOfRain}=weatherData[0]
+export default function OtherCharts ({val}) {
 
+  console.log(val)
+    const { humidity, temperatureCelsius,wind,precipitation,uvIndex,chanceOfRain}=weatherData[0]
+ 
 
     return (
      <div className='otherchartsdiv'>

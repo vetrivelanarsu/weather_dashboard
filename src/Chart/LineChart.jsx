@@ -93,7 +93,7 @@ const weatherData = [
  
 ];
 
-export default function ChartComponent() {
+export default function ChartComponent({val}) {
   const [unit, setUnit] = useState('celsius');
   const [chartData, setChartData] = useState(null);
 

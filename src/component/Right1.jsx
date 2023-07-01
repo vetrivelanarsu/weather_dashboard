@@ -5,14 +5,14 @@ import Chart from '../Chart/LineChart'
 import OtherCharts from '../Bottom/OtherCharts'
 import { FaSun, FaCloud, FaCloudSun, FaCloudRain, FaHumidity, FaWind, FaTemperature } from 'react-icons/fa';
 
-export default function Right1(){
+export default function Right1({val}){
 
 
   return(
     <div className="right1">
        <NavbarRight1 />
-       <Chart />
-       <OtherCharts />
+       <Chart  />
+       <OtherCharts val={val} />
     </div>
   )
 

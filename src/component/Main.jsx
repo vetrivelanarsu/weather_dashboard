@@ -13,7 +13,7 @@ const [val, setVal]=useState(0)
     return(
         
       <div className="main">
-       <Left val={val} setval={setVal} />
+       <Left val={val} setVal={setVal} />
        <Right val={val} />
       </div>
         

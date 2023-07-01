@@ -4,6 +4,7 @@ import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import { FaLocationArrow, FaClock,  } from 'react-icons/fa';
 import { FaSun, FaCloud, FaCloudSun, FaCloudRain } from 'react-icons/fa'
+import { useState } from 'react'
 
 const weatherIcons = {
     Sunny: FaSun,
@@ -12,7 +13,7 @@ const weatherIcons = {
     Rainy: FaCloudRain,
   };
 
-const color='white';
+
 const weatherData = [
     {
       time: '12:00 PM',
@@ -23,7 +24,8 @@ const weatherData = [
       precipitation: 20,
       uvIndex: 3,
       chanceOfRain: 30,
-      weathername:'Sunny'
+      weathername:'Sunny',
+      id:0,
     },
     {
       time: '1:00 PM',
@@ -34,7 +36,8 @@ const weatherData = [
       precipitation: 10,
       uvIndex: 4,
       chanceOfRain: 20,
-      weathername:'Cloudy'
+      weathername:'Cloudy',
+      id:0,
     },
     {
       time: '2:00 PM',
@@ -45,7 +48,8 @@ const weatherData = [
       precipitation: 5,
       uvIndex: 5,
       chanceOfRain: 10,
-      weathername:'Sunny'
+      weathername:'Sunny',
+      id:1,
     },
     {
       time: '3:00 PM',
@@ -56,7 +60,8 @@ const weatherData = [
       precipitation: 0,
       uvIndex: 6,
       chanceOfRain: 5,
-      weathername:'Cloudy'
+      weathername:'Cloudy',
+      id:2,
     },
     {
       time: '4:00 PM',
@@ -67,7 +72,8 @@ const weatherData = [
       precipitation: 0,
       uvIndex: 7,
       chanceOfRain: 0,
-      weathername:'Sunny'
+      weathername:'Sunny',
+      id: 3,
     },
     {
       time: '5:00 PM',
@@ -78,7 +84,8 @@ const weatherData = [
       precipitation: 0,
       uvIndex: 8,
       chanceOfRain: 0,
-      weathername:'Rainy'
+      weathername:'Rainy',
+      id: 4,
     },
     {
       time: '6:00 PM',
@@ -89,51 +96,56 @@ const weatherData = [
       precipitation: 0,
       uvIndex: 7,
       chanceOfRain: 0,
-      weathername:'Sunny'
+      weathername:'Sunny',
+      id: 5,
     },
    
   ];
 
-export default function Slider(){
-
-
-
-    return(
-        <div className="slider">
-           <div className='outer-text'>
-              <div className='first-text-div'>
-                <p> <FaLocationArrow /></p>
-                  <span style={{paddingLeft:'10px'}}>  New York, USA</span>
-              
-              </div>
-              <div className='sec-text-div'>
-              <p><FaClock /></p>
-                  <span style={{paddingLeft:'10px',fontSize:'14px'}}>07:19</span>
-              </div>
-           </div>
-
-           {/* Here I Have My Slider */}
-           <div className="slider-container">
-        <AwesomeSlider className="awesome-slider">
-          {weatherData.map((weather) => (
-            <div key={weather.time} className="slider-item">
-              <div className="weather-card">
-                <div className="icon">
-                   {weather.temperatureCelsius}°C
-                </div>
-                <div className="temperature">
-                   
+  export default function Slider({ val, setVal }) {
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  
+    const handleSlideChange = (currentIndex) => {
+      setCurrentSlideIndex(currentIndex);
+      setVal(weatherData[currentIndex]);
+    };
+  
+    return (
+      <div className="slider">
+        <div className="outer-text">
+          <div className="first-text-div">
+            <p>
+              <FaLocationArrow />
+            </p>
+            <span style={{ paddingLeft: '10px' }}>New York, USA</span>
+          </div>
+          <div className="sec-text-div">
+            <p>
+              <FaClock />
+            </p>
+            <span style={{ paddingLeft: '10px', fontSize: '14px' }}>07:19</span>
+          </div>
+        </div>
+  
+        {/* Here I Have My Slider */}
+        <div className="slider-container">
+          <AwesomeSlider
+            className="awesome-slider"
+            onTransitionEnd={handleSlideChange}
+          >
+            {weatherData.map((weather) => (
+              <div key={weather.time} className="slider-item">
+                <div className="weather-card">
+                  <div className="icon">{weather.temperatureCelsius}°C</div>
+                  <div className="temperature">
                     {React.createElement(weatherIcons[weather.weathername])}
                     {weather.weathername}
-                    </div>
-                {/* <div className="weather-name"></div> */}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
-        </AwesomeSlider>
-      </div>
-
-
+            ))}
+          </AwesomeSlider>
         </div>
-    )
-}
+      </div>
+    );
+  }
