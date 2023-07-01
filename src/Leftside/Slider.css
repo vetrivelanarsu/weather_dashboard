@@ -1,0 +1,76 @@
+.slider{
+    /* border: '1px solid red'; */
+    width:100%;
+    height: 270px;
+    /* border: 1px solid red; */
+    background-color:none;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.outer-text{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.first-text-div{
+    display: flex;
+    padding-top: 20px;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sec-text-div{
+    display: flex;
+    padding-top: 20px;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.awesome-slider {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .slider-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #7784a5 ;
+    color: white;
+    padding: 20px;
+  }
+  
+  .icon {
+   
+    font-size: 5rem;
+  }
+  
+  .temperature {
+    font-size: 1rem;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .weather-name {
+    font-size: 18px;
+    margin-top: 5px;
+  }
