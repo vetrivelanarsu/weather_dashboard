@@ -100,9 +100,10 @@ export default function OtherCharts () {
 
         
             <div className='gridbody'>
-            <Prototype  FaThermometerHalf={ FaThermometerHalf}  bgcolor="#91bced" progress={humidity} value={'Humidity'}  height={50}/>
-            <Prototype  FaThermometerHalf={ FaWind }  bgcolor="#91bced" progress={wind} value={'Wind'}  height={50}/>
-            <Prototype  FaThermometerHalf={ FaThermometerHalf}  bgcolor="#91bced" progress={temperatureCelsius}  value={'Temperature'} height={50}/>
+            <Prototype  FaThermometerHalf={ FaThermometerHalf}  bgcolor="#91bced" progress={humidity} value={'Humidity'}  height={10}/>
+            <Prototype  FaThermometerHalf={ FaWind }  bgcolor="#91bced" progress={wind} value={'Wind'}  height={10}/>
+            <Prototype  FaThermometerHalf={ FaThermometerHalf}  bgcolor="#91bced" progress={temperatureCelsius}  value={'Temperature'} height={10}/>
+            
             </div>
          
         

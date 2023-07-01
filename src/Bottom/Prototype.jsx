@@ -8,23 +8,22 @@ export default function Prototype ({ FaThermometerHalf,bgcolor,progress,height,v
         height: height,
         width: '100%',
         backgroundColor: 'whitesmoke',
-        borderRadius: 40,
-        margin: 50,
-        border: '1px solid red'
+        borderRadius: 20,
       }
       
       const Childdiv = {
-        height: '30%',
         width: `${progress}%`,
         backgroundColor: bgcolor,
-       borderRadius:40,
-        textAlign: 'right'
+        borderRadius:40,
+        textAlign: 'center',
+        height: '100%',
       }
       
       const progresstext = {
         padding: 10,
         color: 'black',
-        fontWeight: 900
+        fontWeight: 900,
+       
       }
 
     return(
@@ -36,10 +35,10 @@ export default function Prototype ({ FaThermometerHalf,bgcolor,progress,height,v
                 </div>
             </div>
             <div className='grid-bottom'>
-                <h1></h1>
+                <h1 style={{textAlign:'center',paddingBottom:'10px'}}>{`${progress}%`}</h1>
                 <div style={Parentdiv} >
                  <div style={Childdiv}>
-                  <span style={progresstext}>{`${progress}%`}</span>
+                  <span style={progresstext}></span>
                  </div>
                 </div>
             </div>

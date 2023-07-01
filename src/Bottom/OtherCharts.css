@@ -2,16 +2,28 @@
 
 
 .gridbody{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 100px;
+    gap: 40px;
    
 
 }
 
 .otherchartsdiv{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   
+}
+
+@media screen and (max-width: 600px) {
+    
+.gridbody{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+   
+
+}
 }
