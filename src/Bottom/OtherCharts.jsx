@@ -90,7 +90,7 @@ const weatherData = [
 export default function OtherCharts ({val}) {
 
   console.log(val)
-    const { humidity, temperatureCelsius,wind,precipitation,uvIndex,chanceOfRain}=weatherData[0]
+    const { humidity, temperatureCelsius,wind,precipitation,uvIndex,chanceOfRain}=weatherData[val]
  
 
     return (

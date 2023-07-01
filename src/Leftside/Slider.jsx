@@ -4,7 +4,9 @@ import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import { FaLocationArrow, FaClock,  } from 'react-icons/fa';
 import { FaSun, FaCloud, FaCloudSun, FaCloudRain } from 'react-icons/fa'
-import { useState } from 'react'
+import { useState,useEffect } from 'react';
+
+
 
 const weatherIcons = {
     Sunny: FaSun,
@@ -103,13 +105,6 @@ const weatherData = [
   ];
 
   export default function Slider({ val, setVal }) {
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  
-    const handleSlideChange = (currentIndex) => {
-      setCurrentSlideIndex(currentIndex);
-      setVal(weatherData[currentIndex]);
-    };
-  
     return (
       <div className="slider">
         <div className="outer-text">
@@ -129,12 +124,13 @@ const weatherData = [
   
         {/* Here I Have My Slider */}
         <div className="slider-container">
-          <AwesomeSlider
-            className="awesome-slider"
-            onTransitionEnd={handleSlideChange}
-          >
+          <AwesomeSlider className="awesome-slider">
             {weatherData.map((weather) => (
-              <div key={weather.time} className="slider-item">
+              <div
+                key={weather.time}
+                className="slider-item"
+                onClick={() => setVal(weather.id)} // Invoke setVal with weather.id
+              >
                 <div className="weather-card">
                   <div className="icon">{weather.temperatureCelsius}°C</div>
                   <div className="temperature">
