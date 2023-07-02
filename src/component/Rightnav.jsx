@@ -6,23 +6,22 @@ import AuthContextProvider, { AuthContext } from '../Context/AuthContextProvider
 
 export default function Rightnav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isAuth,login,logout }=useContext(AuthContext)
+  const { isAuth, login, logout } = useContext(AuthContext);
 
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const handleMenuItemClick = (action) => {
-  
     switch (action) {
       case 'logout':
         // Perform logout action
-         logout()
+        logout();
         console.log('Logged out');
         break;
       case 'login':
         // Perform login action
-         login()
+        login();
         console.log('Logged in');
         break;
       case 'settings':
@@ -44,8 +43,8 @@ export default function Rightnav() {
         </div>
         {isMenuOpen && (
           <ul className="menu">
-            <li onClick={() => handleMenuItemClick('logout')} >Logout</li>
-            <li onClick={() => handleMenuItemClick('login')}>Login</li>
+            <li onClick={() => handleMenuItemClick('logout')} disabled={isAuth}>Logout</li>
+            <li onClick={() => handleMenuItemClick('login')} disabled={!isAuth}>Login</li>
             <li onClick={() => handleMenuItemClick('settings')}>Settings</li>
           </ul>
         )}
