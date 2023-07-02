@@ -9,7 +9,8 @@
     position: relative;
   }
   
-  .meatball-icon {
+  .meatball-icon,
+  .burger-icon {
     cursor: pointer;
   }
   
@@ -34,12 +35,24 @@
     background-color: #f1f1f1;
   }
   
- .rightnavimg{
+  .rightnavimg {
     border-radius: 15px;
     width: 60px;
   }
-
-  .rightnavimg>img{
-    width:100%;
+  
+  .rightnavimg > img {
+    width: 100%;
     border-radius: 15px;
   }
+  
+  /* Media query for screens below 600px */
+  @media (max-width: 600px) {
+    .rightnav {
+      width: auto;
+    }
+  
+    .rightnavimg {
+      display: none;
+    }
+  }
+  
