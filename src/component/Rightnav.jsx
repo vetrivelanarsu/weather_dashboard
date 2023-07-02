@@ -15,17 +15,17 @@ export default function Rightnav() {
   const handleMenuItemClick = (action) => {
     switch (action) {
       case 'logout':
-        // Perform logout action
+        
         logout();
         console.log('Logged out');
         break;
       case 'login':
-        // Perform login action
+       
         login();
         console.log('Logged in');
         break;
       case 'settings':
-        // Perform settings action
+        
         console.log('Settings');
         break;
       default:
