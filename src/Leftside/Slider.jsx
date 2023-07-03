@@ -129,7 +129,7 @@ const weatherData = [
               <div
                 key={weather.time}
                 className="slider-item"
-                onClick={() => setVal(weather.id)} 
+                onTransitionEnd={() => setVal(weather.id)} 
               >
                 <div className="weather-card">
                   <div className="icon">{weather.temperatureCelsius}°C</div>

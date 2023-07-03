@@ -14,7 +14,7 @@ root.render(
     <AuthContextProvider>
       <App />
     </AuthContextProvider>
-   </ChakraProvider>
+  </ChakraProvider>
 );
 
 
